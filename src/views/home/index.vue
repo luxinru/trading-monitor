@@ -194,7 +194,7 @@ export default {
 
       .center_data {
         position: absolute;
-        top: 0;
+        top: 20px;
         display: flex;
         align-items: center;
 
