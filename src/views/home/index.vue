@@ -45,6 +45,8 @@
             <span class="label"> 交易重量(吨) </span>
           </div>
         </div>
+
+        <Map />
       </div>
       <div class="right">
         <RealtimeData />
@@ -61,6 +63,7 @@ import GoodsVolume from '@/views/components/goods-volume.vue'
 import RealtimeData from '@/views/components/realtime-data.vue'
 import RegistrationStatus from '@/views/components/registration-status.vue'
 import CustomerVolume from '@/views/components/customer-volume.vue'
+import Map from '@/views/components/map.vue'
 
 import countTo from 'vue-count-to'
 
@@ -73,7 +76,8 @@ export default {
     GoodsVolume,
     RegistrationStatus,
     CustomerVolume,
-    countTo
+    countTo,
+    Map
   },
 
   data () {

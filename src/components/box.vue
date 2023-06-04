@@ -1,7 +1,13 @@
 <template>
   <div class="box" :class="{ direction: backgroundDirection === 'right' }">
     <section class="title">
-      {{ title }}
+      <span class="name">
+        {{ title }}
+      </span>
+
+      <div class="slot">
+        <slot name="prefix" />
+      </div>
     </section>
 
     <section class="content">
@@ -48,12 +54,19 @@ export default {
     background-size: 100% 100%;
     display: flex;
     align-items: center;
-    padding: 0 60px 3px;
-    font-size: 22px;
-    font-family: YouSheBiaoTiHei;
-    font-weight: 400;
-    color: #ffffff;
+    padding: 0 10px 3px 60px;
     margin-left: -35px;
+
+    .name {
+      font-size: 22px;
+      font-family: YouSheBiaoTiHei;
+      font-weight: 400;
+      color: #ffffff;
+    }
+
+    .slot {
+      flex: 1 0;
+    }
   }
 
   .content {
