@@ -14,6 +14,7 @@
               :endVal="661"
               :duration="1500"
               :decimals="0"
+              suffix="户"
             ></countTo>
           </span>
         </div>
@@ -30,6 +31,7 @@
               :endVal="439"
               :duration="1500"
               :decimals="0"
+              suffix="户"
             ></countTo>
           </span>
         </div>

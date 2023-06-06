@@ -182,7 +182,7 @@ export default {
               show: true,
               fontSize: 14,
               color: 'rgba(238, 238, 238, 0.7)',
-              formatter: '{value}'
+              formatter: '{value}万元'
             }
           }
         ],

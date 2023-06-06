@@ -42,7 +42,7 @@
                 :decimals="2"
               ></countTo>
             </span>
-            <span class="label"> 交易重量(吨) </span>
+            <span class="label"> 交易重量(万吨) </span>
           </div>
         </div>
 

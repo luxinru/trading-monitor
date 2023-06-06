@@ -11,8 +11,16 @@
       <tbody ref="body">
         <template v-if="list.length">
           <tr v-for="(item, i) in list" :key="i">
-            <td v-for="(column, j) in columns" :key="j">
-              {{ item[column.value] }}
+            <td
+              v-for="(column, j) in columns"
+              :key="j"
+              :class="{ tdclass: j === 0 && item[column.value].length > 5 }"
+            >
+              <span
+                :class="{ scroll: j === 0 && item[column.value].length > 5 }"
+              >
+                {{ item[column.value] }}
+              </span>
             </td>
           </tr>
         </template>
@@ -172,6 +180,7 @@ export default {
       th,
       td {
         flex: 1 0;
+        overflow: hidden;
       }
 
       th {
@@ -196,9 +205,27 @@ export default {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+      }
+
+      .tdclass {
+        justify-content: flex-start;
+      }
+
+      .scroll {
+        white-space: nowrap; /* 避免文本换行 */
+        animation: scroll 7s linear infinite; /* 使用动画实现自动滚动，5s为滚动时长，可以根据需要调整 */
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        40% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
       }
     }
   }

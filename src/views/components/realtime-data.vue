@@ -2101,11 +2101,11 @@ export default {
           value: 'label3'
         },
         {
-          label: '重量',
+          label: '重量(吨)',
           value: 'label4'
         },
         {
-          label: '金额',
+          label: '金额(元)',
           value: 'label5'
         }
       ]
