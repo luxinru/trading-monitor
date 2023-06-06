@@ -106,7 +106,9 @@ export default {
   methods: {
     initChart () {
       // 基于准备好的dom，初始化echarts实例
-      this.chart = echarts.init(this.$refs.chart)
+      if (!this.chart) {
+        this.chart = echarts.init(this.$refs.chart)
+      }
 
       var colorList = ['#f36c6c', '#e6cf4e', '#20d180', '#0093ff']
       var datas = this.list

@@ -10,6 +10,8 @@
 import Box from '@/components/box.vue'
 import XTable from '@/components/xtable.vue'
 
+import { shuffle } from 'lodash'
+
 export default {
   name: 'RealtimeData',
 
@@ -2124,11 +2126,7 @@ export default {
 
   methods: {
     shuffleArray (array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-        ;[array[i], array[j]] = [array[j], array[i]]
-      }
-      return array
+      return shuffle(array)
     }
   }
 }
