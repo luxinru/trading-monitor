@@ -7,11 +7,11 @@
             <img src="@/assets/images/base.png" alt="" />
             <img src="@/assets/images/park.png" alt="" />
           </div>
-          <span class="label"> 一号园区 </span>
+          <span class="label"> 宁夏园区 </span>
           <span class="value">
             <countTo
               :startVal="0"
-              :endVal="589"
+              :endVal="661"
               :duration="1500"
               :decimals="0"
             ></countTo>
@@ -23,11 +23,11 @@
             <img src="@/assets/images/base.png" alt="" />
             <img src="@/assets/images/park.png" alt="" />
           </div>
-          <span class="label"> 二号园区 </span>
+          <span class="label"> 安徽园区 </span>
           <span class="value">
             <countTo
               :startVal="0"
-              :endVal="589"
+              :endVal="439"
               :duration="1500"
               :decimals="0"
             ></countTo>

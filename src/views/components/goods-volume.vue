@@ -4,7 +4,7 @@
       <template slot="prefix">
         <div class="btns">
           <span :class="{ active: active === 1 }" @click="active = 1"
-            >交易额（亿元）</span
+            >交易额（万元）</span
           >
           <span :class="{ active: active === 2 }" @click="active = 2"
             >交易重量（万吨）</span
@@ -52,13 +52,13 @@ export default {
 
       if (this.active === 1) {
         options = {
-          轻废: 229.01,
-          中废: 372.12,
-          重废: 0.36,
-          剪切料: 0.13,
-          破碎料: 4.33,
-          废铝: 2.25,
-          废玻璃: 0.57
+          轻废: 2290100,
+          中废: 400,
+          重废: 3600,
+          剪切料: 1300,
+          破碎料: 43300,
+          废铝: 22500,
+          废玻璃: 5700
         }
       } else {
         options = {

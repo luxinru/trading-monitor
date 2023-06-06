@@ -47,7 +47,8 @@ export default {
           formatter (params) {
             const val0 = params[0].value
             const val1 = params[1].value
-            const circle = '<span style="display:inline-block;margin-right:5px;border-radius:50%;width:10px;height:10px;left:5px;background-color:'
+            const circle =
+              '<span style="display:inline-block;margin-right:5px;border-radius:50%;width:10px;height:10px;left:5px;background-color:'
             const data0 = `${circle}rgba(49, 147, 248, 1)"></span> ${params[0].seriesName}: ${val0}`
             const data1 = `${circle}rgba(55, 255, 201, 1)"></span> ${params[1].seriesName}: ${val1}`
             return `${params[0].axisValueLabel}<br/>${data0}<br/>${data1}`
@@ -69,13 +70,13 @@ export default {
 
           data: [
             {
-              name: '交易额',
+              name: '交易额(万元)',
               itemStyle: {
                 color: 'rgba(49, 147, 248, 1)'
               }
             },
             {
-              name: '交易吨数',
+              name: '交易吨数(万吨)',
               itemStyle: {
                 color: 'rgba(55, 255, 201, 1)'
               }
@@ -84,7 +85,17 @@ export default {
         },
         xAxis: {
           type: 'category',
-          data: ['名称1', '名称2', '名称3', '名称4', '名称5', '名称6', '名称7'],
+          data: [
+            '中再宁夏',
+            '中再洛阳',
+            '中再山西',
+            '中再常州',
+            '中再睢县',
+            '安徽回收',
+            '安徽开发',
+            '滨州新格',
+            '巩义新格'
+          ],
           axisLine: {
             show: false
           },
@@ -93,6 +104,8 @@ export default {
           },
           axisLabel: {
             show: true,
+            interval: 0,
+            rotate: 30,
             textStyle: {
               color: 'rgba(238, 238, 238, 0.7)',
               fontSize: 12
@@ -119,11 +132,31 @@ export default {
                 type: 'dashed'
               }
             }
+          },
+          {
+            type: 'value',
+            axisLine: {
+              show: false
+            },
+            axisTick: {
+              show: false
+            },
+            axisLabel: {
+              color: 'rgba(238, 238, 238, 0.7)',
+              fontSize: 12
+            },
+            splitLine: {
+              show: true,
+              lineStyle: {
+                color: 'rgba(183, 200, 235, 0.15)',
+                type: 'dashed'
+              }
+            }
           }
         ],
         series: [
           {
-            name: '交易额',
+            name: '交易额(万元)',
             type: 'line',
             // showAllSymbol: true, //显示所有图形。
             symbol: 'circle', // 标记的图形为实心圆
@@ -137,11 +170,15 @@ export default {
             lineStyle: {
               color: 'rgba(49, 147, 248, 1)'
             },
-            data: [175, 160, 153, 121, 156, 121, 156]
+            data: [
+              546300.0, 25210.0, 24200.0, 17100.0, 10600.0, 44800.0, 126300.0,
+              11800.0, 4500.0
+            ]
           },
           {
-            name: '交易吨数',
+            name: '交易吨数(万吨)',
             type: 'line',
+            yAxisIndex: 1,
             showAllSymbol: true, // 显示所有图形。
             symbol: 'circle', // 标记的图形为实心圆
             symbolSize: 6, // 标记的大小
@@ -154,7 +191,7 @@ export default {
             lineStyle: {
               color: 'rgba(55, 255, 201, 1)'
             },
-            data: [212, 140, 132, 55, 40, 55, 40]
+            data: [174.18, 8.32, 7.61, 10.46, 3.28, 13.23, 38.23, 0.79, 0.31]
           }
         ]
       })

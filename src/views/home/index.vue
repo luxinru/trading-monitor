@@ -25,7 +25,7 @@
             <span class="value">
               <countTo
                 :startVal="0"
-                :endVal="4969.99"
+                :endVal="2375482.18"
                 :duration="1500"
                 :decimals="2"
               ></countTo>
@@ -37,7 +37,7 @@
             <span class="value">
               <countTo
                 :startVal="0"
-                :endVal="4969.99"
+                :endVal="770.54"
                 :duration="1500"
                 :decimals="2"
               ></countTo>
