@@ -114,6 +114,7 @@ export default {
       const option = {
         tooltip: {
           trigger: 'axis',
+          confine: true,
           axisPointer: {
             type: 'shadow'
           }
@@ -188,7 +189,7 @@ export default {
         series: [
           {
             z: 2,
-            name: 'value',
+            name: '交易金额（万元）',
             type: 'bar',
             barCategoryGap: '40%',
             barGap: '20%',
