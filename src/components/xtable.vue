@@ -8,7 +8,7 @@
           </th>
         </tr>
       </thead>
-      <tbody ref="body">
+      <tbody ref="body" @mouseenter="onMouseenter" @mouseleave="onMouseleave">
         <template v-if="list.length">
           <tr v-for="(item, i) in list" :key="i">
             <td
@@ -95,7 +95,6 @@ export default {
 
   methods: {
     autoPlay () {
-      console.log('object :>> ', [this.$refs.body])
       const { clientHeight, scrollHeight } = this.$refs.body
       if (scrollHeight > clientHeight) {
         // 表格内容区域自动滚动
@@ -107,6 +106,14 @@ export default {
           }
         }, 50)
       }
+    },
+
+    onMouseenter () {
+      window.clearInterval(this.timer)
+    },
+
+    onMouseleave () {
+      this.autoPlay()
     }
   }
 }

@@ -6,7 +6,7 @@
         <span>admin</span>
       </div>
 
-      <span class="name"> 实时交易数据监控平台 </span>
+      <span class="name"> 中再云汇数据监控平台 </span>
 
       <span class="right">
         {{ currentTime }}

@@ -2113,7 +2113,13 @@ export default {
   },
 
   created () {
-    this.tableList = this.shuffleArray(this.tableList)
+    this.tableList = this.shuffleArray(this.tableList.map(item => {
+      return {
+        ...item,
+        label4: item.label4.toFixed(2),
+        label5: item.label5.toFixed(2)
+      }
+    }))
   },
 
   methods: {
