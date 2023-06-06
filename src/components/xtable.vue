@@ -101,7 +101,7 @@ export default {
         this.timer = setInterval(() => {
           this.$refs.body.scrollTop += 1
 
-          if (this.$refs.body.scrollTop === scrollHeight - clientHeight) {
+          if (this.$refs.body.scrollTop >= scrollHeight - clientHeight) {
             this.$refs.body.scrollTop = 0
           }
         }, 50)
